@@ -3,4 +3,4 @@
 yum -y install httpd php
 service httpd start
 chkconfig httpd on
-echo "Oi Entrega Continua" > /var/www/html/index.html
+git clone https://github.com/jfaerman/jfaerman.com.br.git /var/www/html

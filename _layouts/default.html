@@ -1,20 +1,17 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect by Pixelarity
+	pixelarity.com @pixelarity
+	License: pixelarity.com/license
+-->
 <html>
-
-  {% include head.html %}
-
-  <body>
-
-    {% include header.html %}
-
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
-
-    {% include footer.html %}
-
-  </body>
-
+	{% include head.html %}
+	<body>
+		<div id="wrapper">
+			{% include header.html%}
+			{% include main.html %}
+			{% include sidebar.html%}
+		</div>
+		{% include scripts.html %}
+	</body>
 </html>

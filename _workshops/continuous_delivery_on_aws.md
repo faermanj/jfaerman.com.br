@@ -1,3 +1,29 @@
+---
+layout: talk
+title: Continuous Delivery on AWS
+last_update: 1980-01-09
+---
+# English
+Delivering value through applications faster is a goal of most, if not all, software organizations. However, infrastructure provisioning and the deployment is a challenge, especially for the automation of complex and high scale architectures.
+
+This session features the techniques, tools and services more relevant in implementing such automations. Starting from scratch, we visit the necessary elements for deploying websites and applications using the web console, command line tools and related services such as Amazon S3, AWS Elastic Beanstalk and AWS CloudFormation.
+
+In addition to the tools, we'll share the patterns and techniques used in real environments for delivery continues to cloud applications. Come see how to reduce the delivery time and completely automate your software process from the commit to the UX.
+
+### Topics
+Continuous Integration and Delivery
+Handing static websites with Amazon S3
+Delivering applications with Amazon EC2
+Automating it all with AWS Elastic Beanstalk
+
+### Prerequisites
+Although not mandatory, the participant is expected to understand:
+Basics of web programming (HTTP, HTML, JS, CSS)
+Basics of Linux servers (SSH access, navigate directories, edit files from the shell)
+
+### Attention
+All participants will have access to temporary AWS lab accounts, bring your devices!
+
 # Portuguese
 
 ## Oficina de Entrega Contínua na AWS

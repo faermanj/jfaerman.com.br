@@ -1,17 +1,18 @@
 ---
-layout: default
+layout: talk
+title: About Me
+last_update: 1980-01-09
 ---
-<section>
-  <div class="mini-posts">
-    {% for talk in site.talks | sort: 'title' %}
-    <article class="mini-post">
-      <header>
-        <h3><a href="{{talk.url}}">{{talk.title}}</a></h3>
-        <time class="published" datetime="{{ talk.last_update | date_to_string }}">{{ talk.last_update | date_to_string }}</time>
-        <a href="#" class="author"><img src="images/avatar.jpg" alt="" /></a>
-      </header>
-      <a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
-    </article>
-    {% endfor %}
-  </div>
-</section>
+
+<p style="text-align:center;"><img src="/images/juliofaerman1.jpg" width="90%"/></p>
+
+<h1> Mini Bio </h1>
+
+<h2> English </h2>
+<p>{% include minibio_en.html %}</p>
+
+<h2> Portuguese </h2>
+<p>{% include minibio_pt.html %}</p>
+
+<h2> Spanish </h2>
+<p>{% include minibio_es.html %}</p>

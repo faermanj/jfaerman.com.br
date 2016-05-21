@@ -8,9 +8,15 @@ layout: default
       <header>
         <h3><a href="{{talk.url}}">{{talk.title}}</a></h3>
         <time class="published" datetime="{{ talk.last_update | date_to_string }}">{{ talk.last_update | date_to_string }}</time>
-        <a href="#" class="author"><img src="images/avatar.jpg" alt="" /></a>
+        <!--
+        <a href="{{talk.url}}" class="author">
+          <img src="images/avatar.jpg" alt="" />
+        </a>
+        -->
       </header>
-      <a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
+      <a href="{{talk.url}}" class="image">
+        <img src="{{talk.url | replace: '.html', '.png'}}" alt="" />
+      </a>
     </article>
     {% endfor %}
   </div>

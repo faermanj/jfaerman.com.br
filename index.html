@@ -1,23 +1,31 @@
 ---
 layout: default
 ---
-<section>
-  <div class="mini-posts">
-    {% for talk in site.talks | sort: 'title' %}
-    <article class="mini-post">
-      <header>
-        <h3><a href="{{talk.url}}">{{talk.title}}</a></h3>
-        <time class="published" datetime="{{ talk.last_update | date_to_string }}">{{ talk.last_update | date_to_string }}</time>
-        <!--
-        <a href="{{talk.url}}" class="author">
-          <img src="images/avatar.jpg" alt="" />
-        </a>
-        -->
-      </header>
-      <a href="{{talk.url}}" class="image">
-        <img src="{{talk.url | replace: '.html', '.png'}}" alt="" />
-      </a>
-    </article>
-    {% endfor %}
-  </div>
-</section>
+{% for post in site.posts %}
+<article class="post">
+  <header>
+    <div class="title">
+      <h2><a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a></h2>
+      <p>{{post.subtitle}}</p>
+    </div>
+    <div class="meta">
+      <time class="published" datetime="2015-10-22">{{ post.date | date: "%b %-d, %Y" }}</time>
+      <a href="#" class="author"><span class="name">{{ post.persona }}</span><!--<img src="images/avatar.jpg" alt="" /></a>-->
+    </div>
+  </header>
+  <a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
+  {{post.excerpt}}
+  <footer>
+    <ul class="actions">
+      <li><a href="{{ post.url | prepend: site.baseurl }}" class="button big">Continue Reading</a></li>
+    </ul>
+    <ul class="stats">
+      <li><a href="#">{{post.category}}</a></li>
+      <!--
+      <li><a href="#" class="icon fa-heart">28</a></li>
+      <li><a href="#" class="icon fa-comment">128</a></li>
+      -->
+    </ul>
+  </footer>
+</article>
+{% endfor %}
